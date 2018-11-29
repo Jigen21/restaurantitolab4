@@ -1,0 +1,8 @@
+.container {
+    color: white;
+    background-image: url('../../../assets/restau.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: 1;
+  }

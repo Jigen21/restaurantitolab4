@@ -1,0 +1,95 @@
+<img src="../../../assets/table.jpg" class="mesa" />
+
+<h1>Mesas</h1>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> id </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="estado">
+    <th mat-header-cell *matHeaderCellDef> estado </th>
+    <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+  </ng-container>
+
+ 
+
+  <ng-container matColumnDef="cliente">
+      <th mat-header-cell *matHeaderCellDef> cliente </th>
+      <td mat-cell *matCellDef="let element"> {{element.cliente}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="tomar">
+      <th mat-header-cell *matHeaderCellDef> Tomar Pedidos </th>
+      <td mat-cell *matCellDef="let element"> {{element.mozo}} 
+        <button class="botonTomar" (click)="tomarPedido(element.id)" >Tomar Pedidos</button></td>
+    
+    </ng-container>
+
+
+
+    <ng-container matColumnDef="mozo">
+      <th mat-header-cell *matHeaderCellDef> Entregar Pedidos </th>
+      <td mat-cell *matCellDef="let element"> {{element.mozo}} 
+        <button (click)="entregarPedido(element.id)" >Entregar Pedidos</button></td>
+    
+    </ng-container>
+
+    <ng-container matColumnDef="sentarse">
+      <th mat-header-cell *matHeaderCellDef> sentarse </th>
+      <td mat-cell *matCellDef="let element">
+        <button (click)="ocuparMesa(element.id)" >Sentarse</button></td>
+    
+    </ng-container>
+
+  
+
+    
+   
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<div *ngIf="verMozo">
+
+<h1>Mesas para liberar</h1>
+
+<table mat-table [dataSource]="mesasPagadas" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> id </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="estado">
+    <th mat-header-cell *matHeaderCellDef> estado </th>
+    <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+  </ng-container>
+
+ 
+
+  <ng-container matColumnDef="cliente">
+      <th mat-header-cell *matHeaderCellDef> cliente </th>
+      <td mat-cell *matCellDef="let element"> {{element.cliente}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="liberar">
+      <th mat-header-cell *matHeaderCellDef> Liberar Mesa </th>
+      <td mat-cell *matCellDef="let element"> 
+        <button class="botonLiberar" (click)="liberarMesa(element.id)" >Liberar Mesa</button></td>
+    
+    </ng-container>
+
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumnsdos"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumnsdos;"></tr>
+</table>
+
+</div>

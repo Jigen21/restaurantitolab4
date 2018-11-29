@@ -1,0 +1,20 @@
+<div class="container">
+
+  <h1>Dar de alta un auto</h1>
+  
+  <input type="text" placeholder="Patente" [(ngModel)]="patente" />
+  <input type="text" placeholder="Marca" [(ngModel)]="marca" />
+  <input type="text" placeholder="Color" [(ngModel)]="color" />
+  <input type="number" placeholder="Kilometros" min="0" [(ngModel)]="kilometros" />
+
+  <select [(ngModel)]="tipo">
+    <option value="auto">Auto</option>
+    <option value="moto">Moto</option>
+    <option value="camioneta">Camioneta</option>
+  </select>
+
+  {{test | autoEstado}}
+
+  <button (click)="CargarAuto()">Cargar auto</button>
+
+</div>

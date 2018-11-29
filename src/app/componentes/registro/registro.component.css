@@ -1,0 +1,11 @@
+.container {
+    background-image: url('../../../assets/restreg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.sombreado {
+    background-color: rgba(0, 0, 0, .2);
+}

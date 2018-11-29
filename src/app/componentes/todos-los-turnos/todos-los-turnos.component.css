@@ -1,0 +1,41 @@
+table { width: 100%; }
+
+.busqueda {
+    text-align: center;
+}
+
+input {
+    margin: 20px 0 20px 0;
+}
+
+input:focus {
+    transform: none;
+}
+
+td {
+    border-bottom: 1px solid gray;
+}
+
+tr:last-of-type > td{
+
+    border: none;
+}
+
+tr:hover:not(:first-of-type) {
+    background-color: gray;
+    color: white;
+}
+
+.test {
+    position: relative;
+    color: red;
+    padding-bottom: 100px;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    font-weight: bold;
+}
+
+td {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}

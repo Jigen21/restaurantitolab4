@@ -1,0 +1,13 @@
+table { width: 100%; }
+
+.botonPagar {
+    width: 200px;
+    margin: 40px auto 40px auto;
+    display: block;
+}
+
+.foto {
+    width: 200px;
+    margin: 40px auto 40px auto;
+    display: block;
+}

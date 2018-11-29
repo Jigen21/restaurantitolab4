@@ -1,0 +1,20 @@
+<div class="container">
+
+    <div class="sombreado"></div>
+
+    <h1>Registro Cliente</h1>
+
+    <input type="text" placeholder="Ingresa tu correo" [(ngModel)]="correo" />
+    <input type="password" placeholder="Ingresa tu contraseña" [(ngModel)]="password" />
+
+    <select [(ngModel)]="tipo">
+        <option value="cliente">Cliente</option>
+        
+    </select>
+
+ 
+
+    <button (click)="Registrar()">Registrarse</button>
+
+</div>
+

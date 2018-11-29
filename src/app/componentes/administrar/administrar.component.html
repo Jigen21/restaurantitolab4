@@ -1,0 +1,90 @@
+
+<h1>ALTA DE EMPLEADO</h1>
+
+Correo
+<input type="text" placeholder="Ingrese el correo" [(ngModel)]="correo" />
+
+Tipo
+<select [(ngModel)]="tipo">
+  <option value="mozo">mozo</option>
+  <option value="cocinero">cocinero</option>
+  <option value="cervezero">cervezero</option>
+  <option value="bartender">bartender</option>
+  <option value="candybar">candybar</option>
+</select>
+
+clave
+<input type="password" placeholder="Ingresa tu contraseña" [(ngModel)]="password" />
+
+<button (click)="alta()">Dar de alta</button>
+
+
+<h1>ADMINISTRAR EMPLEADOS</h1>
+
+<table mat-table [dataSource]="empleados" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="nombre">
+    <th mat-header-cell *matHeaderCellDef> nombre </th>
+    <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="tipo">
+    <th mat-header-cell *matHeaderCellDef> tipo </th>
+    <td mat-cell *matCellDef="let element"> {{element.tipo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="modificar">
+    <th mat-header-cell *matHeaderCellDef> modificar </th>
+    <td mat-cell *matCellDef="let element"><button class="botonModificar" (click)="suspender()">Suspender empleado</button> </td>
+  </ng-container>
+
+  <ng-container matColumnDef="eliminar">
+    <th mat-header-cell *matHeaderCellDef> eliminar </th>
+    <td mat-cell *matCellDef="let element"> <button (click)="eliminar(element.nombre)">Eliminar Empleado</button>  </td>
+  </ng-container>
+
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<h1>FECHAS DE INGRESO</h1>
+<table mat-table [dataSource]="fechas" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="correo">
+      <th mat-header-cell *matHeaderCellDef> correo </th>
+      <td mat-cell *matCellDef="let element"> {{element.correo}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="fecha">
+      <th mat-header-cell *matHeaderCellDef> fecha </th>
+      <td mat-cell *matCellDef="let element"> {{element.fecha}} </td>
+    </ng-container>
+  
+  
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumnsFechas"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumnsFechas;"></tr>
+  </table>
+
+
+  <h1>OPERACIONES DE SECTOR</h1>
+<table mat-table [dataSource]="operaciones" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="tipo">
+      <th mat-header-cell *matHeaderCellDef> tipo </th>
+      <td mat-cell *matCellDef="let element"> {{element.operaciones}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="cantidad">
+      <th mat-header-cell *matHeaderCellDef> cantidad </th>
+      <td mat-cell *matCellDef="let element"> {{element.cantidad}} </td>
+    </ng-container>
+  
+  
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumnsOperaciones"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumnsOperaciones;"></tr>
+  </table>
+

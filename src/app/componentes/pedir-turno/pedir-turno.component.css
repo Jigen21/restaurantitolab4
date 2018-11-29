@@ -1,0 +1,8 @@
+input {
+    margin-right: 0;
+    margin-left: 0; 
+}
+
+input:focus {
+    transform: none;
+}

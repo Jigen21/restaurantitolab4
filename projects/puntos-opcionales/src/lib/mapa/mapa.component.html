@@ -1,0 +1,17 @@
+<div>
+  <div>
+      <label for="latitude">Latitud:</label>
+      <input id="latitude" type="number" [(ngModel)]="latitude" placeholder="Latitude">
+  </div>
+
+  <div>
+      <label for="longitude">Longitud:</label>
+      <input id="longitude" type="number" [(ngModel)]="longitude" placeholder="Longitude">
+  </div>
+  <button (click)="setCenter()">Go</button>
+
+ 
+</div>
+<br>
+<div id="map" class="map"></div>
+<div id="mouse-position"></div>

@@ -1,0 +1,17 @@
+table { width: 100%; }
+
+.mesa {
+    width: 200px;
+    margin: 40px auto 40px auto;
+    display: block;
+}
+
+.botonTomar
+{
+    background-color:blue;
+}
+
+.botonLiberar
+{
+    background-color:green;
+}

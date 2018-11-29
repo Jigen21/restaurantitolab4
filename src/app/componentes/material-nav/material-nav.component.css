@@ -1,0 +1,22 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+}
+
+.active-list-item {
+  color: #3F51B5 !important; /* Note: You could also use a custom theme */
+}
+
+.asd
+{
+  color: #3F51B5 !important; /* Note: You could also use a custom theme */
+  background-image: url('../../../assets/3443.jpg');
+}

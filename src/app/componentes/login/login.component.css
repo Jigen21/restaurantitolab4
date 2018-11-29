@@ -1,0 +1,31 @@
+.container {
+    color: white;
+    background-image: url('../../../assets/rst.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: 1;
+}
+
+span {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+a:link {
+    color: #ADD5E7;
+}
+
+a:visited {
+    color: #ADD5E7;
+}
+
+.botones > button {
+    margin: 10px;
+}
+
+.asd {
+    width: 200px;
+    margin: 1px auto 1px auto;
+    display: block;
+}
